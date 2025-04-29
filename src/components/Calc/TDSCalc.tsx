@@ -38,8 +38,9 @@ ${num.toLocaleString("en-IN")}`;
           The TDS calculator estimates your tax exemption on housing allowance,
           helping you manage finances efficiently.
         </p>
-        {/* Left grid */}
-        <div className="grid grid-cols-2">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          {/* Left grid */}
           <div>
             {/* Radio Group */}
             <div className="flex gap-[2.37rem] mb-[1.87rem]">

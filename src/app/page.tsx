@@ -2,6 +2,7 @@ import NEasySteps from "@/components/AdsBanners/NEasySteps";
 import SuccessBanner from "@/components/AdsBanners/SuccessBanner";
 import TDSCalc from "@/components/Calc/TDSCalc";
 import ExploreOther from "../components/ExploreOther/ExploreOther";
+import PrivateLimitedCompanyRegistration11 from "@/components/PvtLtdNew/private-limited-company-registration-11";
 
 export default function Home() {
   return (
@@ -18,8 +19,9 @@ registration in 4 easy step"
 at an affordable price and get personalized guidance tailored to your needs!
 Fill out the form below to begin."
       /> */}
-      <TDSCalc />
-      <ExploreOther />
+      {/* <TDSCalc /> */}
+      {/* <ExploreOther /> */}
+      <PrivateLimitedCompanyRegistration11 />
     </div>
   );
 }
