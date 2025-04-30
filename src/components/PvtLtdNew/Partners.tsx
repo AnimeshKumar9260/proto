@@ -14,11 +14,11 @@ export default function Partners() {
       <h2 className="text-2xl font-[600] mb-12 text-[#333]">
         RegisterKaro is trusted by
       </h2>
-      <div className="flex justify-between gap-4">
+      <div className="flex flex-wrap justify-between gap-4">
         {logos.map((item, index) => (
           <Image
             key={index}
-            className="aspect-[3/2] hover:scale-[1.1] duration-300 object-contain mix-blend-color-burn w-[9rem]"
+            className="aspect-[3/2] hover:scale-[1.1] duration-300 object-contain mix-blend-color-burn w-[6rem] md:w-[9rem]"
             src={item}
             alt="partners"
           />

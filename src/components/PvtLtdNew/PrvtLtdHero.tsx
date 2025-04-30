@@ -1,8 +1,6 @@
 "use client";
 
 import heroImg from "./hero4.jpg";
-import logo from "./logo.webp";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function PrvtLtdHero() {
@@ -11,11 +9,11 @@ export default function PrvtLtdHero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNumbers((prev) => [...prev, current]); // Append current number
-      setCurrent((prev) => (prev % 7) + 1); // Cycle from 1 to 7
+      setNumbers((prev) => [...prev, current]);
+      setCurrent((prev) => (prev % 7) + 1);
     }, 500);
 
-    return () => clearInterval(interval); // Clean up on unmount
+    return () => clearInterval(interval);
   }, [current]);
 
   const checkData = [
@@ -28,20 +26,13 @@ export default function PrvtLtdHero() {
 
   return (
     <div
-      className="w-full max-h-[90vh] overflow-hidden bg-cover bg-center"
+      className="w-full overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroImg.src})`,
       }}
     >
       <div className="px-4 py-8 md:px-14 md:py-10 bg-gradient-to-r from-[rgba(0,0,0,0.9)] to-[rgba(0,0,0,0.2)] w-full h-full flex backdrop-blur-[2px] justify-center flex-col">
-        <Image
-          src={logo}
-          alt="Company logo"
-          width={70}
-          height={70}
-          className="bg-white/10 rounded-2xl"
-        />
-        <h1 className="text-2xl text-slate-200 leading-[2.5rem] mt-4 mb-8">
+        <h1 className="text-2xl text-slate-200 leading-[2.5rem] mb-8">
           Your Trusted Partner for <br />
           <span className="text-white font-[600] text-[2.5rem]">
             Private Limited Company Registration
@@ -49,33 +40,33 @@ export default function PrvtLtdHero() {
         </h1>
         <p className="text-xl text-slate-200 mb-8">
           Get your Private Limited Company Registration in just{" "}
-          <span className="bg-orange-500 font-[600] px-2 py-1 rounded">
+          <span className="underline decoration-[2px] underline-offset-4 decoration-orange-500 font-[600]">
             14 days
           </span>{" "}
           at{" "}
-          <span className="bg-orange-500 font-[600] px-2 py-1 rounded">
+          <span className="underline decoration-[2px] underline-offset-4 decoration-orange-500 font-[600]">
             Rs.1,999/-
           </span>{" "}
           only.
         </p>
-        <div className="text-[white] grid grid-cols-2 max-w-[700px] gap-2 mb-8">
+        <div className="text-[white] grid grid-cols-1 md:grid-cols-2 max-w-[700px] gap-2 mb-8">
           {checkData.map((item, index) => (
             <div key={index} className="flex items-center gap-2">
               <input
                 type="checkbox"
                 readOnly
                 checked={numbers.includes(index + 1)}
-                className="accent-orange-500 h-6 w-6 pointer-events-none"
+                className="accent-orange-300 h-6 w-6 pointer-events-none"
               />
               <p className="text-xl">{item}</p>
             </div>
           ))}
         </div>
         <div className="flex gap-8">
-          <button className="px-6 py-3 w-fit bg-sky-800 hover:bg-blue-600 duration-300 rounded font-[600] text-[#eee]">
+          <button className="px-6 py-3 w-fit bg-sky-800 hover:bg-sky-600 duration-300 rounded font-[600] text-[#eee]">
             Call Us
           </button>
-          <button className="px-6 py-3 w-fit bg-green-800 hover:bg-green-600 duration-300 rounded font-[600] text-[#eee]">
+          <button className="px-6 py-3 w-fit bg-sky-800 hover:bg-sky-600 duration-300 rounded font-[600] text-[#eee]">
             Whatsapp Us
           </button>
         </div>

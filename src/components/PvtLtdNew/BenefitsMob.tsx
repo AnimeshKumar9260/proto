@@ -13,7 +13,7 @@ import approved from "./approved.svg";
 import { useState } from "react";
 import rarr from "./rarr.svg";
 
-export default function Benefits() {
+export default function BenefitsMob() {
   interface BenefitCollection {
     img: string | StaticImageData;
     heading: string;
@@ -30,11 +30,6 @@ export default function Benefits() {
       swapped: true,
       longTxt:
         "Many times startups need to borrow money and take things on credit. In case of normal Partnerships, Partners personal savings and property would be at risk incase business is not able to repay its loans. In a private limited company, only investment in business is lost, personal assets of the directors are safe.",
-    },
-    {
-      img: paper,
-      heading: "panel",
-      desc: "panel",
     },
     {
       img: stock,
@@ -81,11 +76,11 @@ export default function Benefits() {
   const [curIndex, setCurIndex] = useState(0);
 
   return (
-    <div className="bg-[#F5F5F5] hidden md:block py-12 px-4 md:px-10">
+    <div className="bg-[#F5F5F5] md:hidden py-12 px-4 md:px-10">
       <h2 className="text-2xl font-[600] mb-12 text-[#333]">
         Why Register a Private Limited Company?
       </h2>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="hidden md:grid grid-cols-3 gap-8">
         {benefitsList.map((item, index) =>
           item.heading === "panel" ? (
             <div
@@ -156,6 +151,57 @@ export default function Benefits() {
             </div>
           )
         )}
+      </div>
+      <div
+        key={benefitsList[curIndex].desc}
+        className="row-span-3 relative place-self-center self-center"
+      >
+        <Image
+          src={paper}
+          height={1000}
+          width={1000}
+          alt="Paper"
+          className="drop-shadow-2xl"
+        />
+        <div
+          style={{ fontFamily: '"Courier Prime", system-ui' }}
+          className="absolute w-full px-8 py-10 top-0 left-1/2 -translate-x-1/2"
+        >
+          <h3 className="font-[700] text-xl mb-4">
+            {benefitsList[curIndex].heading}
+          </h3>
+          <p>{benefitsList[curIndex].longTxt}</p>
+        </div>
+        <div className="mt-12 flex justify-between">
+          <div className="flex gap-2 items-center bg-white py-1 px-2 rounded-md">
+            <Image
+              src={rarr}
+              height={15}
+              width={15}
+              alt="rarr"
+              className="rotate-180"
+            />
+            <button
+              onClick={() =>
+                curIndex > 0 ? setCurIndex(curIndex - 1) : setCurIndex(0)
+              }
+            >
+              Prev
+            </button>
+          </div>
+          <div className="flex gap-2 items-center bg-white py-1 px-2 rounded-md">
+            <button
+              onClick={() =>
+                curIndex < benefitsList.length - 1
+                  ? setCurIndex(curIndex + 1)
+                  : setCurIndex(benefitsList.length - 1)
+              }
+            >
+              Next
+            </button>
+            <Image src={rarr} height={15} width={15} alt="rarr" />
+          </div>
+        </div>
       </div>
     </div>
   );
