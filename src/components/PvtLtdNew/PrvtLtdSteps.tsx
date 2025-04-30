@@ -9,18 +9,22 @@ export default function PrvtLtdSteps() {
     {
       ico: clipBoard,
       title: "Fill out our quick online form",
+      bg: "bg-[#fdba74]/40",
     },
     {
       ico: upload,
       title: "Upload your documents securely",
+      bg: "bg-[#86efac]/40",
     },
     {
       ico: wallet,
       title: "Pay registration fees",
+      bg: "bg-[#d8b4fe]/40",
     },
     {
       ico: complete,
       title: "Get your company registered hassle-free!",
+      bg: "bg-[#7dd3fc]/40",
     },
   ];
 
@@ -33,9 +37,14 @@ export default function PrvtLtdSteps() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 md:grid-cols-[1fr_5fr] p-4 rounded-lg gap-4 md:flex-row justify-center md:justify-start items-center border-[2px] border-slate-300"
+            className="relative group grid grid-cols-1 md:grid-cols-[1fr_5fr] overflow-hidden p-4 rounded-lg gap-4 md:flex-row justify-center md:justify-start items-center border-[2px] border-slate-300"
           >
-            <div className="bg-gradient-to-tr from-orange-300 to-orange-200 py-4 p-2 rounded-md">
+            <div
+              className={`${step.bg} absolute duration-300 top-[100%] group-hover:top-[0%] left-0 w-full h-full`}
+            ></div>
+            <div
+              className={`${step.bg} duration-300 group-hover:bg-white py-4 p-2 rounded-md`}
+            >
               <Image
                 src={step.ico}
                 width={32}

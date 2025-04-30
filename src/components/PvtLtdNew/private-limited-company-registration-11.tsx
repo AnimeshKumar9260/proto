@@ -1,6 +1,9 @@
 import { Benefits } from "./Benefits";
+import PvtLtdService from "./PvtLtdService";
+import Partners from "./Partners";
 import PrvtLtdHero from "./PrvtLtdHero";
 import PrvtLtdSteps from "./PrvtLtdSteps";
+import { PvtLtdReviews } from "./PvtLtdReviews";
 
 export default function PrivateLimitedCompanyRegistration11() {
   return (
@@ -8,6 +11,9 @@ export default function PrivateLimitedCompanyRegistration11() {
       <PrvtLtdHero />
       <PrvtLtdSteps />
       <Benefits />
+      <PvtLtdService />
+      <Partners />
+      <PvtLtdReviews />
     </div>
   );
 }

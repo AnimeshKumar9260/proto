@@ -11,6 +11,7 @@ import handshake from "./handshake.svg";
 import stock from "./stock.svg";
 import approved from "./approved.svg";
 import { useState } from "react";
+import rarr from "./rarr.svg";
 
 export const Benefits = () => {
   interface BenefitCollection {
@@ -98,6 +99,13 @@ export const Benefits = () => {
                 alt="Paper"
                 className="drop-shadow-2xl"
               />
+              <Image
+                src={approved}
+                height={200}
+                width={200}
+                alt="stamp"
+                className="absolute bottom-[7%] opacity-50 right-[4%] rotate-[25deg]"
+              />
               <div
                 style={{ fontFamily: '"Courier Prime", system-ui' }}
                 className="absolute w-full px-16 py-20 top-0 left-1/2 -translate-x-1/2"
@@ -107,13 +115,6 @@ export const Benefits = () => {
                 </h3>
                 <p>{benefitsList[curIndex].longTxt}</p>
               </div>
-              <Image
-                src={approved}
-                height={200}
-                width={200}
-                alt="stamp"
-                className="absolute bottom-[7%] opacity-70 right-[4%] rotate-[25deg]"
-              />
             </div>
           ) : (
             <div
@@ -141,6 +142,16 @@ export const Benefits = () => {
               >
                 <h4 className="font-[600] text-[#333]">{item.heading}</h4>
                 <p className="text-slate-500">{item.desc}</p>
+                <div className="flex gap-2 mt-4 group hover:underline duration-300 underline-offset-4 decoration-orange-500">
+                  <p className="text-orange-500">Read More</p>
+                  <Image
+                    src={rarr}
+                    height={15}
+                    width={15}
+                    alt="rarr"
+                    className="group-hover:translate-x-1 transition"
+                  />
+                </div>
               </div>
             </div>
           )
