@@ -3,6 +3,7 @@ import PvtCard from "./PvtCard";
 export default function PvtLtdPlanning() {
   const planData = [
     {
+      elite: false,
       type: "Starter",
       tag: "₹500 off",
       purpose: "Perfect for initiating company registration",
@@ -23,6 +24,7 @@ export default function PvtLtdPlanning() {
       ],
     },
     {
+      elite: true,
       type: "Standard",
       tag: "50% off",
       purpose: "Quick company registration in 7 to 14 days",
@@ -44,6 +46,7 @@ export default function PvtLtdPlanning() {
       ],
     },
     {
+      elite: false,
       type: "Professional",
       tag: "30% off",
       purpose: "Quick company registration + brand protection",
@@ -74,7 +77,7 @@ export default function PvtLtdPlanning() {
       <h2 className="text-2xl font-[600] mb-12 text-[#333]">
         Choose Right plan for your business
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         {planData.map((item, index) => (
           <PvtCard key={index} data={item} />
         ))}

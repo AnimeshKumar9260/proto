@@ -37,12 +37,12 @@ export default function PvtLtdService() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {points.map((item, index) => (
           <div key={index} className="group cursor-pointer">
-            <h4 className="font-[600] text-2xl duration-300 group-hover:border-b-orange-500 text-[#333] pb-4 mb-4 border-b-[2px] border-b-slate-300">
+            <h4 className="font-[600] text-2xl duration-300 group-hover:border-b-[#FCA229] text-[#333] pb-4 mb-4 border-b-[2px] border-b-slate-300">
               {item.heading}
             </h4>
             <p>{item.desc}</p>
             <div className="flex items-center gap-2 mt-4">
-              <p className="group-hover:text-orange-500 duration-300">
+              <p className="group-hover:text-[#FCA229] duration-300">
                 More details
               </p>
               <Image

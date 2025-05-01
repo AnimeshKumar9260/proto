@@ -9,17 +9,15 @@ export default function FaqBox() {
 
   return (
     <div
+      onClick={() => setIsOpen(!isOpen)}
       className={`${
-        isOpen ? "border-orange-500" : "border-slate-300"
+        isOpen ? "border-[#FCA229]" : "border-slate-300"
       } border-[2px] rounded-lg px-4 py-6 h-fit`}
     >
-      <div
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between"
-      >
+      <div className="flex items-center justify-between">
         <h3
           className={`${
-            isOpen ? "text-orange-500" : "text-[#333]"
+            isOpen ? "text-[#FCA229]" : "text-[#333]"
           } text-lg font-semibold`}
         >
           What is a Private Limited Company?

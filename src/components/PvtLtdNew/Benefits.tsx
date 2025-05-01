@@ -142,8 +142,8 @@ export default function Benefits() {
               >
                 <h4 className="font-[600] text-[#333]">{item.heading}</h4>
                 <p className="text-slate-500">{item.desc}</p>
-                <div className="flex gap-2 mt-4 group hover:underline duration-300 underline-offset-4 decoration-orange-500">
-                  <p className="text-orange-500">Read More</p>
+                <div className="flex gap-2 mt-4 group hover:underline duration-300 underline-offset-4 decoration-[#FCA229]">
+                  <p className="text-[#FCA229]">Read More</p>
                   <Image
                     src={rarr}
                     height={15}

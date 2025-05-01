@@ -35,7 +35,7 @@ export const PvtLtdReviews = () => {
         <Image src={star} height={30} width={30} alt="Star" />
         <Image src={star} height={30} width={30} alt="Star" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {reviews.map((review, index) => (
           <div
             key={index}

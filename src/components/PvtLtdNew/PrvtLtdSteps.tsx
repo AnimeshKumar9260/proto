@@ -37,7 +37,7 @@ export default function PrvtLtdSteps() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`${step.bg} relative group grid grid-cols-1 md:grid-cols-[1fr_5fr] overflow-hidden p-4 rounded-lg gap-4 md:flex-row justify-center md:justify-start items-center border-[2px] border-slate-300`}
+            className={`${step.bg} relative group grid grid-cols-1 md:grid-cols-[1fr_5fr] overflow-hidden p-4 rounded-lg gap-4 md:flex-row justify-center md:justify-start items-center`}
           >
             <div className={`py-4 p-2 rounded-md`}>
               <Image

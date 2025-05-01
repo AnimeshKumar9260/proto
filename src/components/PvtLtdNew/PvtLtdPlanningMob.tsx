@@ -8,6 +8,7 @@ export default function PvtLtdPlanningMob() {
 
   const planData = [
     {
+      elite: false,
       type: "Starter",
       tag: "₹500 off",
       purpose: "Perfect for initiating company registration",
@@ -28,6 +29,7 @@ export default function PvtLtdPlanningMob() {
       ],
     },
     {
+      elite: true,
       type: "Standard",
       tag: "50% off",
       purpose: "Quick company registration in 7 to 14 days",
@@ -49,6 +51,7 @@ export default function PvtLtdPlanningMob() {
       ],
     },
     {
+      elite: false,
       type: "Professional",
       tag: "30% off",
       purpose: "Quick company registration + brand protection",
