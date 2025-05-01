@@ -13,7 +13,7 @@ export default function PrvtLtdSteps() {
     },
     {
       ico: upload,
-      title: "Upload your documents securely",
+      title: "Upload your documents",
       bg: "bg-[#86efac]/40",
     },
     {
@@ -37,14 +37,9 @@ export default function PrvtLtdSteps() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className="relative group grid grid-cols-1 md:grid-cols-[1fr_5fr] overflow-hidden p-4 rounded-lg gap-4 md:flex-row justify-center md:justify-start items-center border-[2px] border-slate-300"
+            className={`${step.bg} relative group grid grid-cols-1 md:grid-cols-[1fr_5fr] overflow-hidden p-4 rounded-lg gap-4 md:flex-row justify-center md:justify-start items-center border-[2px] border-slate-300`}
           >
-            <div
-              className={`${step.bg} absolute duration-300 top-[100%] group-hover:top-[0%] left-0 w-full h-full`}
-            ></div>
-            <div
-              className={`${step.bg} duration-300 group-hover:bg-white py-4 p-2 rounded-md`}
-            >
+            <div className={`py-4 p-2 rounded-md`}>
               <Image
                 src={step.ico}
                 width={32}
@@ -53,7 +48,7 @@ export default function PrvtLtdSteps() {
                 className="mx-auto self-center"
               />
             </div>
-            <p className="mt-2 self-center">{step.title}</p>
+            <p className="self-center">{step.title}</p>
           </div>
         ))}
       </div>

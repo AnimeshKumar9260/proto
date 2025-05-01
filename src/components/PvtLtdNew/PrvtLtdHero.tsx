@@ -25,13 +25,8 @@ export default function PrvtLtdHero() {
   ];
 
   return (
-    <div
-      className="w-full overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${heroImg.src})`,
-      }}
-    >
-      <div className="px-4 py-8 md:px-14 md:py-10 bg-gradient-to-r from-[rgba(0,0,0,0.9)] to-[rgba(0,0,0,0.2)] w-full h-full flex backdrop-blur-[2px] justify-center flex-col">
+    <div className="w-full overflow-hidden grid grid-cols-1 md:grid-cols-2 bg-gradient-to-r from-black to-orange-300">
+      <div className="px-4 py-8 md:px-14 md:py-10 w-full h-full flex  justify-center flex-col">
         <h1 className="text-2xl text-slate-200 leading-[2.5rem] mb-8">
           Your Trusted Partner for <br />
           <span className="text-white font-[600] text-[2.5rem]">
@@ -71,6 +66,7 @@ export default function PrvtLtdHero() {
           </button>
         </div>
       </div>
+      <div></div>
     </div>
   );
 }
